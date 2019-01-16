@@ -179,12 +179,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlH-st-fkh">
+                                <rect key="frame" x="20" y="55" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="D4O-WX-ziK"/>
+                                    <constraint firstAttribute="width" constant="32" id="uSW-1b-scI"/>
+                                </constraints>
+                                <state key="normal" image="left"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="VV6-fW-9Mb" eventType="touchUpInside" id="Y0D-xy-dOI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cYM-T6-iHO" firstAttribute="top" secondItem="j01-oT-tIw" secondAttribute="top" constant="40" id="2DM-bD-RCH"/>
+                            <constraint firstItem="mlH-st-fkh" firstAttribute="top" secondItem="j01-oT-tIw" secondAttribute="top" constant="11" id="3Ts-Im-iAG"/>
                             <constraint firstItem="ZGP-mI-j6A" firstAttribute="trailing" secondItem="j01-oT-tIw" secondAttribute="trailing" id="9Kb-98-Bhz"/>
                             <constraint firstItem="ZGP-mI-j6A" firstAttribute="leading" secondItem="j01-oT-tIw" secondAttribute="leading" id="BXq-ES-bMg"/>
+                            <constraint firstItem="mlH-st-fkh" firstAttribute="leading" secondItem="j01-oT-tIw" secondAttribute="leading" constant="20" id="Hba-8S-jEb"/>
                             <constraint firstItem="j01-oT-tIw" firstAttribute="trailing" secondItem="TIG-Pc-Wnz" secondAttribute="trailing" constant="70" id="W0E-iK-lrw"/>
                             <constraint firstItem="cYM-T6-iHO" firstAttribute="centerX" secondItem="fIG-NJ-SaJ" secondAttribute="centerX" id="f9e-6K-Wll"/>
                             <constraint firstItem="TIG-Pc-Wnz" firstAttribute="top" secondItem="cYM-T6-iHO" secondAttribute="bottom" constant="32" id="fQd-AO-sk7"/>
@@ -209,5 +222,6 @@
     </scenes>
     <resources>
         <image name="NO8hx" width="640" height="960"/>
+        <image name="left" width="32" height="32"/>
     </resources>
 </document>
