@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class WeatherData {
+    var temperature = 0
+    var condition = ""
+    var city = ""
+   
+}
+

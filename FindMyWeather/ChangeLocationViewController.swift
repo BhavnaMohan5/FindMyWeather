@@ -8,23 +8,57 @@
 
 import UIKit
 
-class ChangeLocationViewController: UIViewController {
+protocol ChangeLocationDelegate {
+    func userChangedLocation(cityName : String)
+    func userChangedLocation(lat : String,lon : String)
+}
 
+class ChangeLocationViewController: UIViewController {
+    //IBOutlets and Variables declaration :
+
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var longTextField: UITextField!
+    @IBOutlet weak var latTextField: UITextField!
+    @IBOutlet weak var toggleCityAndLatLon: UISwitch!
+    
+    var delegate : ChangeLocationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        longTextField.isHidden = true
+        latTextField.isHidden = true
 
-        // Do any additional setup after loading the view.
+    }
+    //IBActions :
+    @IBAction func getWeatherBtnTapped(_ sender: UIButton) {
+        if toggleCityAndLatLon.isOn {
+            let city = cityTextField.text!
+            delegate?.userChangedLocation(cityName: city)
+            self.dismiss(animated: true, completion: nil)
+        }
+        else {
+            let lon = longTextField.text!
+            let lat = latTextField.text!
+            delegate?.userChangedLocation(lat: lat, lon: lon)
+             self.dismiss(animated: true, completion: nil)
+        }
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func toggledCityAndLatLon(_ sender: UISwitch) {
+        if !sender.isOn {
+            cityTextField.isHidden = true
+            latTextField.isHidden = false
+            longTextField.isHidden = false
+        }
+        else
+        {
+            longTextField.isHidden = true
+            latTextField.isHidden = true
+            cityTextField.isHidden = false
+        }
     }
-    */
+    
 
 }
