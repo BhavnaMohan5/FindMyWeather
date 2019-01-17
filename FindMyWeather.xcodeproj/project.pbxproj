@@ -73,16 +73,40 @@
 		FB0E33FA21EDFFA6002C15E5 /* FindMyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				FB55AC7E21F098FA00A6D216 /* Controllers */,
+				FB55AC7D21F098F000A6D216 /* View */,
+				FB55AC7C21F098DA00A6D216 /* Model */,
 				FB0E33FB21EDFFA6002C15E5 /* AppDelegate.swift */,
-				FB0E33FD21EDFFA6002C15E5 /* ViewController.swift */,
-				FB0E33FF21EDFFA6002C15E5 /* Main.storyboard */,
-				FB0E340D21EE5393002C15E5 /* WeatherDataModel.swift */,
-				FB0102FB21EF0E6100A7A852 /* ChangeLocationViewController.swift */,
 				FB0E340221EDFFAC002C15E5 /* Assets.xcassets */,
 				FB0E340421EDFFAC002C15E5 /* LaunchScreen.storyboard */,
 				FB0E340721EDFFAC002C15E5 /* Info.plist */,
 			);
 			path = FindMyWeather;
+			sourceTree = "<group>";
+		};
+		FB55AC7C21F098DA00A6D216 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E340D21EE5393002C15E5 /* WeatherDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB55AC7D21F098F000A6D216 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E33FF21EDFFA6002C15E5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB55AC7E21F098FA00A6D216 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E33FD21EDFFA6002C15E5 /* ViewController.swift */,
+				FB0102FB21EF0E6100A7A852 /* ChangeLocationViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		FFFCB94ABB60C6C595974D9A /* Pods */ = {
@@ -376,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.BhavnaMohan.FindMyWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -395,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.BhavnaMohan.FindMyWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
