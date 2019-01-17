@@ -67,9 +67,51 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="8eS-S5-Xv2" userLabel="Humidity and Pressure Stack View">
+                                <rect key="frame" x="84.5" y="398" width="245" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-ST-2cJ" userLabel="Humidity Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="245" height="25.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="odH-o3-Zw2" userLabel="Humidity">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="FkD-Ie-zCN" userLabel="Humidity">
+                                                <rect key="frame" x="147.5" y="0.0" width="97.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="09h-q5-0s2" userLabel="Pressure Stack View">
+                                        <rect key="frame" x="0.0" y="74.5" width="245" height="25.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="RFk-Fb-sVb" userLabel="Humidity">
+                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="woh-me-zCb" userLabel="Humidity">
+                                                <rect key="frame" x="146.5" y="0.0" width="98.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-rp-ViJ">
-                                <rect key="frame" x="121.5" y="429" width="171" height="38"/>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="107" y="764" width="200" height="38"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.86820419520547942" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="VDP-ng-bOH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Change Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,27 +120,74 @@
                                     <segue destination="VV6-fW-9Mb" kind="show" identifier="chnageLocation" id="d7C-Pk-ruM"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="Hgf-hQ-hqX" userLabel="Min and Max Temp Stack View">
+                                <rect key="frame" x="89.5" y="556" width="235" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="M41-by-Nux" userLabel="Humidity Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="25.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="OSJ-zr-tbB" userLabel="Humidity">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="cjU-Oe-AQR" userLabel="Humidity">
+                                                <rect key="frame" x="142.5" y="0.0" width="92.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="jHM-xI-oek" userLabel="Pressure Stack View">
+                                        <rect key="frame" x="0.0" y="74.5" width="235" height="25.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="b7L-R7-N7Z" userLabel="Humidity">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="McX-sW-00x" userLabel="Humidity">
+                                                <rect key="frame" x="141.5" y="0.0" width="93.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xit-5d-PZV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="Bhh-Xy-RKv"/>
                             <constraint firstItem="wqw-Xg-OZG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EUp-LG-DYM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xit-5d-PZV" secondAttribute="trailing" constant="85" id="Evb-3M-JFD"/>
+                            <constraint firstItem="Hgf-hQ-hqX" firstAttribute="top" secondItem="8eS-S5-Xv2" secondAttribute="bottom" constant="58" id="Gr3-KU-f8g"/>
                             <constraint firstItem="wqw-Xg-OZG" firstAttribute="top" secondItem="xit-5d-PZV" secondAttribute="bottom" constant="20" id="JOn-3g-DgB"/>
                             <constraint firstItem="xit-5d-PZV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="Jry-1q-16O"/>
                             <constraint firstItem="AsF-C1-EOK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MAF-Aj-bsl"/>
                             <constraint firstItem="AsF-C1-EOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OGF-aT-Cfi"/>
                             <constraint firstItem="AsF-C1-EOK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UWQ-JS-eWn"/>
-                            <constraint firstItem="cb6-rp-ViJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o6F-jh-OT2"/>
-                            <constraint firstItem="cb6-rp-ViJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3J-BR-OBy"/>
+                            <constraint firstItem="8eS-S5-Xv2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Y5G-tr-0ly"/>
+                            <constraint firstItem="cb6-rp-ViJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fLU-1I-XeV"/>
+                            <constraint firstItem="8eS-S5-Xv2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nPv-ct-LfS"/>
+                            <constraint firstItem="Hgf-hQ-hqX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qXg-mC-XbV"/>
                             <constraint firstItem="xit-5d-PZV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="txm-Vp-thr"/>
                             <constraint firstItem="AsF-C1-EOK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ud8-yh-UUM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cb6-rp-ViJ" secondAttribute="bottom" constant="60" id="ulr-IB-H01"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="currentLocation" destination="vbt-L8-6bN" id="Rc6-1P-DYy"/>
                         <outlet property="currentWeatherCondition" destination="PHq-cO-15u" id="uXa-Ph-ICZ"/>
+                        <outlet property="humidityValue" destination="FkD-Ie-zCN" id="eix-Ad-ctM"/>
+                        <outlet property="maxTempValue" destination="McX-sW-00x" id="bbX-aX-nk2"/>
+                        <outlet property="minTempValue" destination="cjU-Oe-AQR" id="jox-Js-HKr"/>
+                        <outlet property="pressureValue" destination="woh-me-zCb" id="VhT-yw-V2S"/>
                         <outlet property="tempLabel" destination="YeF-zm-CIx" id="WDJ-Gg-vcf"/>
                         <outlet property="toggleTemp" destination="fbo-T2-khu" id="iDj-Sv-MSr"/>
                     </connections>
@@ -158,13 +247,13 @@
                                         <rect key="frame" x="0.0" y="63" width="274" height="38"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="quO-w1-IEs">
                                         <rect key="frame" x="0.0" y="126" width="274" height="38"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqY-Ya-6S8">
                                         <rect key="frame" x="0.0" y="189" width="274" height="38"/>

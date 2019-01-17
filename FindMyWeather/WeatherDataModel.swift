@@ -12,6 +12,10 @@ class WeatherData {
     var temperature = 0
     var condition = ""
     var city = ""
+    var pressure = 0
+    var humidity = 0
+    var minTemperature = 0
+    var maxTemperature = 0
    
 }
 
