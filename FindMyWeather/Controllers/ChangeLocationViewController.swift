@@ -16,6 +16,7 @@ enum LatLonErrorCases : Error {
     case incomplete
     case wrongLatitude
     case wrongLongitude
+    case invalidLatLon
 }
 
 protocol ChangeLocationDelegate {
@@ -76,17 +77,23 @@ class ChangeLocationViewController: UIViewController {
                 self.present(alert, animated: true)
                 
             }
-             catch LatLonErrorCases.wrongLongitude {
-                let alert = UIAlertController(title: "Invalid Longitude", message: "Longitude value should be between -180 and +180 degrees.", preferredStyle: .alert)
+            catch LatLonErrorCases.invalidLatLon {
+                let alert = UIAlertController(title: "Invalid Latitude and Longitude", message: "Latitude and Longitude value can only contain numbers and decimals.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 
+            }
+            catch LatLonErrorCases.wrongLongitude {
+                let alert = UIAlertController(title: "Invalid Longitude", message: "Longitude value should be between -180 and +180 degrees.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+
             }
             catch LatLonErrorCases.wrongLatitude {
                 let alert = UIAlertController(title: "Invalid Latitude", message: "Latitude value should be between -90 and +90 degrees.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated: true)
-                
+
             }
             catch {
                 
@@ -130,14 +137,21 @@ class ChangeLocationViewController: UIViewController {
         else if checkFor == "latLon"{
             let lat = latTextField.text!
             let long = longTextField.text!
-            print("lat : \(lat) and lon : \(long)")
+           
+            
+            let regexLatLon = try NSRegularExpression(pattern: "^-?\\d*\\.{0,1}\\d+$", options: [])
             if lat.isEmpty || long.isEmpty {
                 throw LatLonErrorCases.incomplete
             }
-            else if Int(lat)! < -90 || Int(lat)! > 90 {
+            if !(regexLatLon.firstMatch(in: String(lat), options: [], range: NSMakeRange(0, String(lat).count)) != nil) || !(regexLatLon.firstMatch(in: String(long), options: [], range: NSMakeRange(0, String(long).count)) != nil)
+            {
+                throw  LatLonErrorCases.invalidLatLon
+            }
+          
+            else if Int(Double(lat)!) < -90 || Int(Double(lat)!) > 90 {
                 throw LatLonErrorCases.wrongLatitude
             }
-            else if Int(long)!  < -180 || Int(long)! > 180 {
+            else if Int(Double(long)!)  < -180 || Int(Double(long)!) > 180 {
                 throw LatLonErrorCases.wrongLongitude
         }
     }
