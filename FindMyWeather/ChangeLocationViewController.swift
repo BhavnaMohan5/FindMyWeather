@@ -130,6 +130,7 @@ class ChangeLocationViewController: UIViewController {
         else if checkFor == "latLon"{
             let lat = latTextField.text!
             let long = longTextField.text!
+            print("lat : \(lat) and lon : \(long)")
             if lat.isEmpty || long.isEmpty {
                 throw LatLonErrorCases.incomplete
             }

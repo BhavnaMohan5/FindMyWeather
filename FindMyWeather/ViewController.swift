@@ -54,7 +54,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate,ChangeLocationD
             response in
                 if response.result.isSuccess {
                     let weatherJSON = JSON(response.result.value!)
-                    print(weatherJSON)
                     self.updateWeatherData(json: weatherJSON)
                 }
                 else {
